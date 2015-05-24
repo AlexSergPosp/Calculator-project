@@ -3,143 +3,22 @@
     android:layout_height="match_parent"
 
     android:background="#C8E6C9"
-    tools:context="com.example.alex.calculate.MainActivity">
+    tools:context="com.example.alex.calculate.MainActivity"
+    android:id="@+id/relativeLayout">
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar"/>
 
-    <LinearLayout
-        android:orientation="vertical"
+    <FrameLayout
+        android:id="@+id/frgmCont"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearLayout4"
-        android:layout_marginTop="45dp"
-        android:layout_below="@+id/toolbar"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:elevation="25dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
-        android:background="#4CAF50">
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="35dp"
-            android:id="@+id/linearLayout3"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/textViewNumber"
-                android:id="@+id/textView1"
-                android:layout_weight="1"
-                android:layout_gravity="left"
-                android:layout_marginLeft="10dp"
-                android:textColor="#E0F7FA"/>
-
-            <EditText
-                android:layout_width="50dp"
-                android:elevation="25dp"
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:ems="10"
-                android:layout_marginRight="10dp"
-                android:id="@+id/editText"
-                android:layout_weight="2"
-                android:textColor="#E0F7FA"
-                android:background="#4CAF50"
-                android:layout_gravity="right"
-                android:autoText="false"
-                android:elegantTextHeight="true"
-                android:fontFamily="@string/textViewNumber"
-                android:hint="number"
-                android:textSize="25dp"
-                android:textAlignment="center" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:id="@+id/linearLayout"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="25dp"
-            android:elevation="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/textViewPercentage"
-                android:id="@+id/textView2"
-                android:layout_weight="1"
-                android:layout_marginLeft="10dp"
-                android:textColor="#E0F7FA"/>
-
-            <EditText
-                android:layout_width="50dp"
-                android:elevation="25dp"
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:ems="10"
-                android:layout_weight="2"
-                android:id="@+id/editText2"
-                android:layout_marginRight="10dp"
-                android:textColor="#E0F7FA"
-                android:background="#4CAF50"
-                android:elegantTextHeight="true"
-                android:hint="perstetage"
-                android:textSize="25dp"
-                android:textAlignment="center" />
-        </LinearLayout>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/buttonName"
-            android:id="@+id/button"
-            android:onClick="onClick"
-            android:background="#4CAF50"
-            android:layout_marginTop="30dp"
-            android:layout_gravity="center_horizontal" />
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:id="@+id/linearLayout2"
-            android:layout_marginTop="50dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="20dp"
-            android:elevation="20dp"
-            android:background="#4CAF50">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/textViewAnswer"
-                android:id="@+id/textView"
-                android:layout_weight="1"
-                android:textColor="#E0F7FA"
-                android:layout_marginLeft="10dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/textView3"
-                android:layout_weight="1"
-                android:layout_marginRight="20dp"
-                android:textColor="#E0F7FA"
-                android:textSize="25dp"
-                android:textAlignment="center" />
-        </LinearLayout>
-
-    </LinearLayout>
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="25dp"
+        android:elevation="30dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+    </FrameLayout>
 
 </RelativeLayout>

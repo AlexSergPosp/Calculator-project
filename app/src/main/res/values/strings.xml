@@ -7,9 +7,12 @@
     <string name="nav_menu_item_contacts">Contacts</string>
     <string name="nav_menu_item_item_3">Item 3</string>
     <string name="nav_menu_item_item_4">Item 4</string>
-    <string name="textViewNumber">№</string>
+    <string name="textViewNumber">$</string>
     <string name="textViewPercentage">%</string>
-    <string name="textViewAnswer">=</string>
+    <string name="textViewAnswer">Total</string>
     <string name="buttonName">click</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

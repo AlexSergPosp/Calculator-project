@@ -1,0 +1,135 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout4Discont"
+    android:layout_below="@+id/toolbar"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:background="#F44336"
+    android:elevation="25dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="35dp"
+        android:id="@+id/linearLayout3Discont">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/textViewNumber"
+            android:id="@+id/textView4"
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:textColor="#E0F7FA"
+            android:textSize="30dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:gravity="right"
+            android:id="@+id/editTextDiscont"
+            android:layout_weight="15"
+            android:textColor="#E0F7FA"
+            android:background="#F44336"
+            android:layout_gravity="right"
+            android:autoText="false"
+            android:elegantTextHeight="true"
+            android:fontFamily="@string/textViewNumber"
+            android:hint="0"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:layout_marginRight="5dp"
+            style="@style/Base.Widget.AppCompat.EditText"
+            android:lines="@integer/abc_config_activityDefaultDur"
+            android:singleLine="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/linearLayoutDiscont"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginRight="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/textViewPercentage"
+            android:id="@+id/textView2Discont"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:textColor="#E0F7FA"
+            android:textSize="30dp"
+            android:textIsSelectable="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:gravity="right"
+            android:layout_weight="15"
+            android:id="@+id/editText2Discont"
+            android:textColor="#E0F7FA"
+            android:background="#F44336"
+            android:elegantTextHeight="false"
+            android:hint="0"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:singleLine="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/linearLayout2Discont"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="20dp"
+        android:background="#F44336"
+        android:elevation="5dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/textViewAnswer"
+            android:id="@+id/textView5Discont"
+            android:layout_weight="2"
+            android:textColor="#E0F7FA"
+            android:layout_marginLeft="10dp"
+            android:textAlignment="center"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textViewDiscont"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textColor="#E0F7FA"
+            android:textSize="30dp"
+            android:hint="0" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/button"
+        android:layout_gravity="right"
+        android:background="#F44336" />
+
+</LinearLayout>

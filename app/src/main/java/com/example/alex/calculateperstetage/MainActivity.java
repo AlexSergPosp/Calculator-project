@@ -1,22 +1,22 @@
 package com.example.alex.calculateperstetage;
 
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Layout;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.accountswitcher.AccountHeader;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
-import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
-import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -28,16 +28,26 @@ public class MainActivity extends AppCompatActivity {
     public TextView textView3;
     private EditText editNumber;
     private EditText editPercentage;
+    Standart standart;
+    Discount discount;
+    FragmentTransaction ftrans;
+    Toolbar toolbar;
+    RelativeLayout relative;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        textView3 = (TextView) findViewById(R.id.textView3);
-        editNumber = (EditText) findViewById(R.id.editText);
-        editPercentage = (EditText) findViewById(R.id.editText2);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        relative = (RelativeLayout) findViewById(R.id.relativeLayout);
+        standart = new Standart();
+        discount = new Discount();
+        ftrans = getFragmentManager().beginTransaction();
+        ftrans.add(R.id.frgmCont,standart);
+        ftrans.commit();
+
+
 
         if (toolbar != null) {
             setSupportActionBar(toolbar);
@@ -84,9 +94,17 @@ public class MainActivity extends AppCompatActivity {
         switch (iDrawerItem.getIdentifier()) {
             case 1:
                 Toast.makeText(getApplicationContext(), "1", Toast.LENGTH_SHORT).show();
+                ftrans = getFragmentManager().beginTransaction();
+                ftrans.replace(R.id.frgmCont,standart);
+                ftrans.commit();
                 break;
             case 2:
                 Toast.makeText(getApplicationContext(), "2", Toast.LENGTH_SHORT).show();
+                ftrans = getFragmentManager().beginTransaction();
+                relative.setBackgroundColor(getResources().getColor(R.color.colorRedWhite));
+                ftrans.replace(R.id.frgmCont,discount);
+                toolbar.setBackgroundColor(getResources().getColor(R.color.colorRed));
+                ftrans.commit();
                 break;
             case 3:
                 Toast.makeText(getApplicationContext(), "3", Toast.LENGTH_SHORT).show();
@@ -118,23 +136,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private AccountHeader.Result createAccount() {
-        IProfile profile = new ProfileDrawerItem()
-                .withName("Alexander")
-                .withEmail("alex.serg.posp@gmail.com");
         return new AccountHeader()
                 .withActivity(this)
                 .withHeaderBackground(R.drawable.kalculator)
-                .addProfiles(profile)
                 .build();
     }
 
-    public void onClick(View view) {
-        if (!editNumber.getText().toString().equals("")  && !editPercentage.getText().toString().equals("")){
-            number = Double.parseDouble(editNumber.getText().toString());
-            percentage = Double.parseDouble(editPercentage.getText().toString());
-            answer = (number * percentage) / 100;
-            textView3.setText(answer+"");
-        }
-
-    }
 }
